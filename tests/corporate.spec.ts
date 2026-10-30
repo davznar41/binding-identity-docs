@@ -57,7 +57,14 @@ test('solo navegación interna y recursos propios; sin nuevas funciones', async 
 
 test('fuentes corporativas locales cargadas y respaldo legible', async ({ page }) => {
   await page.goto('/docs/id-validate/');
-  await page.evaluate(() => document.fonts.ready);
+  await page.evaluate(async () => {
+    // Montserrat 700 is declared but not used on this page; request both tested faces.
+    await Promise.all([
+      document.fonts.load('16px Inter'),
+      document.fonts.load('700 32px Montserrat'),
+    ]);
+    await document.fonts.ready;
+  });
   const fonts = await page.evaluate(() => ({
     body: getComputedStyle(document.body).fontFamily,
     title: getComputedStyle(document.querySelector('h1')!).fontFamily,

@@ -43,7 +43,7 @@ El ZIP de evidencias incluye `verification/results.json`, `base-results.json`, `
 | Preferencias del sistema / dispositivos | Alto contraste real, toque y orientación físicos; las emulaciones no los acreditan |
 | Presentación y comprensión | Evaluación completa de preferencias visuales y nivel lector; sin inventar alternativas empresariales |
 | SVG definitivos | Recursos todavía no entregados; presente se prueba con metadatos, no con un SVG corporativo renderizado |
-| CI | Workflow preparado; GitHub/Linux no ejecutado ni validado |
+| CI | Revisar el resultado y los logs del commit en [GitHub Actions](https://github.com/davznar41/binding-identity-docs/actions); sus pruebas automatizadas en Ubuntu/Chromium no sustituyen la evaluación manual |
 
 Los seis criterios abiertos del anexo son **1.3.6, 1.4.4, 1.4.8, 1.4.10, 3.1.5 y 4.1.2**. Los objetivos AAA **3.1.3** y **3.1.4** no se satisfacen: faltan mecanismos aprobados de definición de términos especializados y expansión uniforme de abreviaturas. Se conservan los artículos originales; la empresa debe aportar ese contenido.
 
