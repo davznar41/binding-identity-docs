@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import DocumentationLayout from '../layouts/DocumentationLayout.astro';
+import { getNavigation } from '../data/navigation';
+import { withBase } from '../lib/paths';
+const navigation = getNavigation(await getCollection('docs'));
+---
+<DocumentationLayout title="Página no encontrada" description="Vuelve al índice de documentación de Binding Identity." navigation={navigation}>
+  <p class="eyebrow">Error 404</p>
+  <h1>Página no encontrada</h1>
+  <p class="home-lead">Esta dirección no corresponde a un artículo de la documentación.</p>
+  <a class="primary-link" href={withBase('/')}>Volver al índice <span aria-hidden="true">→</span></a>
+</DocumentationLayout>

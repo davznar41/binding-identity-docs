@@ -1,0 +1,30 @@
+---
+import Header from '../components/Header.astro';
+import SidebarNavigation from '../components/SidebarNavigation.astro';
+import type { DocumentationNode } from '../data/navigation';
+import '../styles/tokens.css';
+import '../styles/fonts.css';
+import '../styles/global.css';
+interface Props { title: string; description: string; navigation: DocumentationNode[]; currentId?: string }
+const { title, description, navigation, currentId } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#76236c" />
+    <title>{title} | Binding Identity · Documentación</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+    <Header />
+    <div class="page-shell">
+      <SidebarNavigation navigation={navigation} currentId={currentId} />
+      <div class="content-shell">
+        <main id="main-content" tabindex="-1"><slot /></main>
+      </div>
+    </div>
+  </body>
+</html>

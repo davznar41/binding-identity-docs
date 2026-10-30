@@ -1,0 +1,13 @@
+---
+import type { DocumentationNode } from '../data/navigation';
+import { withBase } from '../lib/paths';
+interface Props { title: string; parent?: DocumentationNode }
+const { title, parent } = Astro.props;
+---
+<nav class="breadcrumbs" aria-label="Migas de pan">
+  <ol>
+    <li><a href={withBase('/')}>Documentación</a></li>
+    {parent && <li><a href={parent.path}>{parent.title}</a></li>}
+    <li><span>{title}</span></li>
+  </ol>
+</nav>

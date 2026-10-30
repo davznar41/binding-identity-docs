@@ -1,0 +1,23 @@
+{
+  "src/content/docs/api-integrations.md": "8dffde7a90d1b495f1fde2cd65b8d72488ee29defb80316102d207a945c9da37",
+  "src/content/docs/authority-reporting.md": "4e43df10eb76b7159b8aa1c569cff7f3b52b6b9c3430906b6e47c409cfd3c070",
+  "src/content/docs/binding-technology.md": "a84fd7889c718d95ee616d87dfa0d66beb3a16eb5e867b9db4f038714410305f",
+  "src/content/docs/custom-fields-from-pms.md": "33a77197c0da631ad59268485e24ca3cf3a41a142b96e3e5635ebb4ca403fdf7",
+  "src/content/docs/customizable-corporate-image.md": "c86f29e5d75d993438c609e170bd488f2acc403ef5fcad949960267b10572205",
+  "src/content/docs/customizable-guest-check-in.md": "afbba1e1fc68b0df4228cb8f1a57047e35a542e7488bb1f92a6fe5df4af290c5",
+  "src/content/docs/customizable-languages.md": "5e9909b44a1ff5666f59964bde33f2d43731bcf3c6c363874b1d002a96c21a71",
+  "src/content/docs/customizable-legal-texts.md": "e644977c935b5f4e2f421a8c2861df7e2cf87e66fc210126baba016471702d41",
+  "src/content/docs/customizable-paperless-regcard.md": "f73249aabc07cde868f64df45414d2ed331b24b8103a551777dc170e6a3d041c",
+  "src/content/docs/data-analytics.md": "611be7cbbcdfaed7a112c954a652f250a758975dc89d2b5fc27e31620cbf052c",
+  "src/content/docs/id-electronic-reading.md": "078cbc4f3a3ab248106de0bdad0d70e31df068037d840c5948ad95de5f34f8e6",
+  "src/content/docs/id-validate.md": "cca7c157a44132a878263f58506525f71a4622d4c852c7bca999d75ba8523ef7",
+  "src/content/docs/junior-check-in.md": "f14c1a5de130b06ef35384e8f1e508268729caab2b3ba29ce5e3a5594a23023d",
+  "src/content/docs/pms-integrations.md": "e6cc78e08c8e5e331a9d677c18e9625e53a4c59c11ad47f441b22286c0d8ac0d",
+  "src/content/docs/product-updates.md": "eb6c4c9b8d2227af8c0ee56a52f596eeef0992141c13f2ec7eec5730cba361ab",
+  "src/content/docs/authority-reporting/auto-check-in.md": "818f4c42dc6e59b80a9ead7903827f73c956650c6ac8ca56005ded615b7d933b",
+  "src/content/docs/authority-reporting/group-check-in.md": "7a56a011212732f0785f9cab0149a9281c02355651f82d934e334b4d28a66758",
+  "src/content/docs/authority-reporting/offline-group-check-in.md": "c9787b67331c792a79e47fcc8542d78460a6ee709ba523763cf5d59f26e95f62",
+  "src/content/docs/authority-reporting/online-check-in.md": "31a6bbdf2a11144f94d3c251b0df84631209c9ffb74efc6b2524372b1e9b245e",
+  "src/content/docs/authority-reporting/pre-check-in.md": "d2277b94bc0ceb6fb474da092bda569d02d47af7535364f37b294af12567f60c",
+  "src/content/docs/authority-reporting/ubiquity-check-in.md": "c510465c94e9502dca315ff0ee1850704016b89dbab08299e57a9b48f8e65286"
+}

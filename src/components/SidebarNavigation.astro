@@ -1,0 +1,87 @@
+---
+import type { DocumentationNode } from '../data/navigation';
+import DocumentationIcon from './DocumentationIcon.astro';
+interface Props { navigation: DocumentationNode[]; currentId?: string }
+const { navigation, currentId } = Astro.props;
+const childActive = currentId?.startsWith('authority-reporting/') ?? false;
+---
+<aside class="sidebar">
+  <button class="mobile-toggle" type="button" aria-expanded="true" aria-controls="documentation-navigation" hidden>
+    <span><span class="menu-symbol" aria-hidden="true">☰</span> Explorar documentación</span>
+    <span class="chevron" aria-hidden="true">⌄</span>
+  </button>
+  <nav id="documentation-navigation" aria-label="Documentación de funcionalidades">
+    <ul class="nav-list">
+      {navigation.map((node) => (
+        <li class:list={[{ 'has-children': node.children, 'section-active': node.children && childActive }]}>
+          <div class="nav-row">
+            <a href={node.path} aria-current={currentId === node.id ? 'page' : undefined}>
+              <DocumentationIcon id={node.id} />
+              <span>{node.title}</span>
+            </a>
+            {node.children && (
+              <button class="group-toggle" type="button" aria-expanded="true" aria-controls="authority-children" data-default-expanded={childActive ? 'true' : 'false'} aria-label="Subapartados de Bi Authority Reporting" hidden>
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
+              </button>
+            )}
+          </div>
+          {node.children && (
+            <ul id="authority-children" class="child-list">
+              {node.children.map((child) => (
+                <li><a href={child.path} aria-current={currentId === child.id ? 'page' : undefined}><DocumentationIcon id={child.id} /><span>{child.title}</span></a></li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside>
+
+<script>
+  const mobileToggle = document.querySelector<HTMLButtonElement>('.mobile-toggle');
+  const navigation = document.querySelector<HTMLElement>('#documentation-navigation');
+  const groupToggle = document.querySelector<HTMLButtonElement>('.group-toggle');
+  const children = document.querySelector<HTMLElement>('#authority-children');
+
+  if (groupToggle && children) {
+    const setGroup = (expanded: boolean) => {
+      groupToggle.setAttribute('aria-expanded', String(expanded));
+      children.hidden = !expanded;
+    };
+    groupToggle.hidden = false;
+    setGroup(groupToggle.dataset.defaultExpanded === 'true');
+    groupToggle.addEventListener('click', () => setGroup(groupToggle.getAttribute('aria-expanded') !== 'true'));
+  }
+
+  if (mobileToggle && navigation) {
+    const breakpoint = window.matchMedia('(max-width: 59.99rem)');
+    const setMobile = (expanded: boolean, restoreFocus = false) => {
+      mobileToggle.setAttribute('aria-expanded', String(expanded));
+      navigation.hidden = !expanded;
+      if (restoreFocus) mobileToggle.focus();
+    };
+    const adapt = () => {
+      // A resize must not leave keyboard focus inside newly hidden content.
+      const containedFocus = navigation.contains(document.activeElement);
+      const toggleHadFocus = document.activeElement === mobileToggle;
+      mobileToggle.hidden = !breakpoint.matches;
+      setMobile(!breakpoint.matches || containedFocus);
+      if (!breakpoint.matches && toggleHadFocus) {
+        navigation.querySelector<HTMLAnchorElement>('a')?.focus();
+      }
+    };
+    mobileToggle.addEventListener('click', () => setMobile(mobileToggle.getAttribute('aria-expanded') !== 'true'));
+    navigation.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && breakpoint.matches) {
+        event.preventDefault();
+        setMobile(false, true);
+      }
+    });
+    mobileToggle.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && breakpoint.matches) setMobile(false);
+    });
+    breakpoint.addEventListener('change', adapt);
+    adapt();
+  }
+</script>

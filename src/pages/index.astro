@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import DocumentationLayout from '../layouts/DocumentationLayout.astro';
+import DocumentationIcon from '../components/DocumentationIcon.astro';
+import { getNavigation } from '../data/navigation';
+const navigation = getNavigation(await getCollection('docs'));
+---
+<DocumentationLayout title="Documentación de Binding Identity" description="Documentación de las funcionalidades de Binding Identity." navigation={navigation}>
+  <header class="home-hero">
+    <h1>Documentación de Binding Identity</h1>
+  </header>
+  <nav class="article-index" aria-label="Índice de documentación">
+    <ul class="index-list">
+      {navigation.map((node) => (
+        <li class:list={[{ 'index-group': node.children }]}>
+          <a class="index-item" href={node.path}>
+            <DocumentationIcon id={node.id} />
+            <span>{node.title}</span>
+          </a>
+          {node.children && (
+            <ul class="index-children">
+              {node.children.map((child) => (
+                <li><a href={child.path}><DocumentationIcon id={child.id} /><span>{child.title}</span></a></li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
+</DocumentationLayout>

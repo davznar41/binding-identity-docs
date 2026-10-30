@@ -1,0 +1,9 @@
+---
+import type { DocumentationNode } from '../data/navigation';
+interface Props { previous?: DocumentationNode; next?: DocumentationNode }
+const { previous, next } = Astro.props;
+---
+<nav class="previous-next" aria-label="Artículos anterior y siguiente">
+  {previous ? <a href={previous.path}><span class="pager-label"><span aria-hidden="true">←</span> Anterior</span><span>{previous.title}</span></a> : <span class="pager-placeholder"></span>}
+  {next && <a class="next" href={next.path}><span class="pager-label">Siguiente <span aria-hidden="true">→</span></span><span>{next.title}</span></a>}
+</nav>

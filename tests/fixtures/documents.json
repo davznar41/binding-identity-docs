@@ -1,0 +1,131 @@
+[
+  {
+    "number": "1",
+    "id": "binding-technology",
+    "title": "Binding Identity Technology Cloud System (BIT)",
+    "description": "Referencia al ecosistema tecnológico que implementa la plataforma tecnológica Binding Identity sobre la pila tecnológica de AWS."
+  },
+  {
+    "number": "2",
+    "id": "id-electronic-reading",
+    "title": "ID Electronic Reading",
+    "description": "Mediante la lectura electrónica del documento de identidad se extraen los datos almacenados. Esto permite al ciudadano identificarse de forma inequívoca en el proceso de check-in, solucionando los problemas asociados a sistemas obsoletos e inconsistentes."
+  },
+  {
+    "number": "3",
+    "id": "id-validate",
+    "title": "ID Validate",
+    "description": "El huésped valida sus datos en la hoja de registro y estos se integran para su uso corporativo, estando actualizados y disponibles para la cadena en futuras estancias."
+  },
+  {
+    "number": "4",
+    "id": "customizable-paperless-regcard",
+    "title": "Customizable Paperless Regcard",
+    "description": "La hoja de registro del huésped es personalizable con los campos necesarios para cada hotel, incluso dentro de una misma cadena, y está integrada con el PMS."
+  },
+  {
+    "number": "5",
+    "id": "customizable-guest-check-in",
+    "title": "Customizable Guest Check-in",
+    "description": "Permite configurar el proceso de check-in adaptándolo a las necesidades concretas.",
+    "example": "Si el cliente ya estuvo en la cadena, solo tendrá que firmar el registro."
+  },
+  {
+    "number": "6",
+    "id": "customizable-corporate-image",
+    "title": "Customizable Corporate Image",
+    "description": "Permite la personalización de la imagen corporativa de la cadena y, a su vez, disponer de una imagen específica para cada hotel y punto de check-in."
+  },
+  {
+    "number": "7",
+    "id": "customizable-legal-texts",
+    "title": "Customizable Legal Texts",
+    "description": "Los textos legales que se muestran durante el proceso de check-in son personalizables para cada hotel, permitiendo adaptarse a las necesidades en cada momento."
+  },
+  {
+    "number": "8",
+    "id": "customizable-languages",
+    "title": "Customizable Languages",
+    "description": "Se pueden configurar hasta cinco idiomas distintos de forma simultánea para que el huésped elija el más adecuado."
+  },
+  {
+    "number": "9",
+    "id": "product-updates",
+    "title": "Product Updates",
+    "description": "La actualización continua de Binding Identity Technology incorpora de forma sistemática las necesidades y tendencias del mercado."
+  },
+  {
+    "number": "10",
+    "id": "pms-integrations",
+    "title": "PMS Integrations",
+    "description": "Integración vía API cloud con Property Management System."
+  },
+  {
+    "number": "11",
+    "id": "custom-fields-from-pms",
+    "title": "Add Custom Fields from PMS",
+    "description": "Permite la personalización e integración con PMS de los campos que necesite cada hotel."
+  },
+  {
+    "number": "12",
+    "id": "data-analytics",
+    "title": "Data Analytics",
+    "description": "Permite el análisis de datos anonimizados a nivel corporativo mediante un dashboard que facilita informes y exportaciones, o vía API."
+  },
+  {
+    "number": "13",
+    "id": "api-integrations",
+    "title": "API Integrations",
+    "description": "Dispone de una API estándar para integración con terceros."
+  },
+  {
+    "number": "14",
+    "id": "junior-check-in",
+    "title": "Junior Check-in",
+    "description": "Gestiona de forma ágil la problemática asociada al tratamiento de los datos de menores y sus requerimientos legales."
+  },
+  {
+    "number": "15",
+    "id": "authority-reporting",
+    "title": "Bi Authority Reporting (SESHospedajes Management)",
+    "description": "Potente herramienta para la gestión y notificación a las autoridades de las reservas y de los partes de viajeros."
+  },
+  {
+    "number": "15.1",
+    "id": "authority-reporting/pre-check-in",
+    "title": "Bi Pre Check-in",
+    "description": "Permite al huésped que se hospeda por primera vez en el hotel agilizar la gestión del check-in."
+  },
+  {
+    "number": "15.2",
+    "id": "authority-reporting/online-check-in",
+    "title": "Bi On-line Check-in",
+    "description": "Permite al huésped la realización del check-in online."
+  },
+  {
+    "number": "15.3",
+    "id": "authority-reporting/auto-check-in",
+    "title": "Bi Auto Check-in",
+    "description": "El huésped puede hacer su auto check-in en el hotel."
+  },
+  {
+    "number": "15.4",
+    "id": "authority-reporting/group-check-in",
+    "title": "Bi Group Check-in",
+    "description": "Funcionalidad que permite la realización del check-in a un grupo de huéspedes.",
+    "example": "viaje de estudios."
+  },
+  {
+    "number": "15.5",
+    "id": "authority-reporting/ubiquity-check-in",
+    "title": "Bi Ubiquity Check-in",
+    "description": "Permite la realización del check-in al huésped en cualquier lugar sin necesidad de estar en el Front."
+  },
+  {
+    "number": "15.6",
+    "id": "authority-reporting/offline-group-check-in",
+    "title": "Bi Off-line Group Check-in",
+    "description": "Permite la realización del check-in al huésped sin tener conexión al cloud.",
+    "example": "durante un transfer sin conexión a Internet."
+  }
+]

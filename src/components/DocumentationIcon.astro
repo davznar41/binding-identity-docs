@@ -1,0 +1,10 @@
+---
+import type { DocumentationId } from '../data/navigation';
+import { documentationIcons } from '../data/icons';
+import { getDocumentationIcon } from '../lib/documentation-icons';
+
+interface Props { id: DocumentationId }
+const { id } = Astro.props;
+const icon = getDocumentationIcon(id, documentationIcons);
+---
+{icon && <img class="documentation-icon" src={icon.src} width="24" height="24" alt="" aria-hidden="true" />}
